@@ -42,8 +42,10 @@ def printText(filename):
     window.geometry("400x200")
     T = Text(window, height = 5, width = 52)
     l = Label(window, text = "Text")
+    
     l.config(font =("Courier", 24))
     T.config(font = ("Courier", 20))
+    
     l.pack()
     T.pack()
     
