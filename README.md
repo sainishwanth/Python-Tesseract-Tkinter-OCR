@@ -2,4 +2,4 @@
 
 ## Necessary Libs
 
-    pip3 install tk pytesseract numpy pillow
+    pip3 install tk pytesseract numpy pillow opencv-python
