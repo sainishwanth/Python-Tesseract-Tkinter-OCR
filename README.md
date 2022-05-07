@@ -1,5 +1,5 @@
 # Python OCR Using Tesseract and Tkinter
 
-## Commands
+## Necessary Libs
 
     pip3 install tk pytesseract numpy pillow
