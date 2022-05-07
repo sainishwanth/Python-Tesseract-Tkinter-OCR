@@ -5,6 +5,7 @@ from tkinter import filedialog
 from functools import partial
 
 import tkinter
+from pygame import font
 import pytesseract
 import numpy as np
 
@@ -38,10 +39,11 @@ def printText(filename):
 
     window = Tk()
 
-    window.geometry("300x300")
+    window.geometry("400x200")
     T = Text(window, height = 5, width = 52)
-    l = Label(window, text = "OCR")
-    l.config(font =("Courier", 14))
+    l = Label(window, text = "Text")
+    l.config(font =("Courier", 24))
+    T.config(font = ("Courier", 20))
     l.pack()
     T.pack()
     
@@ -59,7 +61,7 @@ def main():
     btn = Button(root, text ='open image', command = open_img).grid(
     row = 1, columnspan = 4)
     
-    root.mainloop()
+    root.mainloop() 
     
 if __name__ == "__main__":
     main()
