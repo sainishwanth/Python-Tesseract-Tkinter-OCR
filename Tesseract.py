@@ -12,9 +12,9 @@ from functools import partial
 root = Tk()
 
 def open_img():
-    x = openfilename()
+    path = openfilename()
  
-    img = Image.open(x)
+    img = Image.open(path)
      
     img = img.resize((250, 250), Image.ANTIALIAS)
  
@@ -26,13 +26,12 @@ def open_img():
     
     panel.grid(row = 2)
     
-    btn = Button(root, text ='Submit', command = partial(printText, x)).grid(row = 5, columnspan = 10)
+    btn = Button(root, text ='Submit', command = partial(printText, path)).grid(row = 5, columnspan = 10)
 
 
 
 def openfilename():
     filename = filedialog.askopenfilename(title ='"pen')
-    print(f"The File name is {filename} It's Type is {type(filename)}")
     return filename
 
 def printText(filename):
@@ -52,7 +51,7 @@ def printText(filename):
 def main():
     root.title("Image ")
 
-    root.geometry("400x400")
+    root.geometry("350x350")
     
     root.resizable(width = True, height = True)
     
